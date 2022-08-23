@@ -1,5 +1,6 @@
+const $contentDiv = document.querySelector('div#content');
+
 function createHeader() {
-    const $contentDiv = document.querySelector('div#content');
 
     const $headerDiv = document.createElement('header');
     
@@ -9,16 +10,19 @@ function createHeader() {
     const $nav = document.createElement('nav');
 
     const $home = document.createElement('p');
+    $home.id = 'home';
     $home.textContent = 'HOME';
 
     $nav.appendChild($home);
 
     const $menu = document.createElement('p');
+    $menu.id = 'menu';
     $menu.textContent = 'MENU';
 
     $nav.appendChild($menu);
 
     const $about = document.createElement('p');
+    $about.id = 'about';
     $about.textContent = 'ABOUT';
 
     $nav.appendChild($about);
@@ -29,4 +33,4 @@ function createHeader() {
     $contentDiv.appendChild($headerDiv);
 }
 
-export {createHeader};
+export {createHeader, $contentDiv};

@@ -12,14 +12,20 @@
 
 body{
     background-color: #ffd404;
+    font-family: "Title";
 }
 
 header{
     display: flex;
-    font-family: "Title";
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
+}
+
+header p{
+    padding: 5px 20px;
+    border: 2px solid black;
 }
 
 div#content header h1{
@@ -31,3 +37,34 @@ nav{
     gap: 30px;
     font-size: 1.5rem;
 }
+
+@keyframes slideIn{
+    from{
+        transform: translateX(-100%);
+    } to {
+        transform: translateX(0%);
+    }
+}
+
+#welcomeContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: slideIn 0.5s;
+}
+
+#welcomeContainer img{
+    width: 50rem;
+}
+
+#welcomeHeader h2{
+    text-align: right;
+    font-size: 7rem;
+}
+
+#welcomeHeader h2.emphasis{
+    color: #5d0000;
+}
+
+
