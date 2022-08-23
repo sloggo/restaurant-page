@@ -12,12 +12,12 @@ function createHome() {
 
     const $hTwo = document.createElement('h2');
     $hTwo.textContent = 'All';
-    $hTwo.classList.add('emphasis');
+    $hTwo.classList.add('emphasis1');
     $welcomeHeader.appendChild($hTwo);
 
     const $hThree = document.createElement('h2');
     $hThree.textContent = 'New';
-    $hThree.classList.add('emphasis');
+    $hThree.classList.add('emphasis2');
     $welcomeHeader.appendChild($hThree);
 
     const $hFour = document.createElement('h2');
