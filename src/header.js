@@ -1,3 +1,5 @@
+import { homeButtonEvent, menuButtonEvent } from "./index.js";
+
 const $contentDiv = document.querySelector('div#content');
 
 function createHeader() {
@@ -12,12 +14,14 @@ function createHeader() {
     const $home = document.createElement('p');
     $home.id = 'home';
     $home.textContent = 'HOME';
+    homeButtonEvent($home);
 
     $nav.appendChild($home);
 
     const $menu = document.createElement('p');
     $menu.id = 'menu';
     $menu.textContent = 'MENU';
+    menuButtonEvent($menu)
 
     $nav.appendChild($menu);
 

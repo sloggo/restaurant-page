@@ -21,6 +21,8 @@ header{
     justify-content: center;
     align-items: center;
     margin-bottom: 100px;
+    border: 2px solid black;
+    padding-bottom: 15px;
 }
 
 header p{
@@ -40,8 +42,10 @@ nav{
 
 @keyframes slideIn{
     from{
+        opacity: 0;
         transform: translateX(-100%);
     } to {
+        opacity: 1;
         transform: translateX(0%);
     }
 }
@@ -67,4 +71,76 @@ nav{
     color: #5d0000;
 }
 
+.menuContainer{
+    padding: 0px 200px;
+    display: grid;
+    grid-template-areas: "one two two three"
+                        "four five six six"
+                        "four seven seven eight";
 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px 200px;
+    gap: 10px;
+
+    animation: slideIn 0.5s;
+}
+
+.card{
+    padding: 15px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    background-color: #ffd404;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    transition: .1s ease;
+}
+
+.card h1{
+    font-size: 4rem;
+
+}
+
+.card img{
+    height: 100%;
+    margin-left: auto;
+}
+
+.card#one{
+    grid-area: one;
+}
+
+.card#two{
+    grid-area: two;
+}
+
+.card#three{
+    grid-area: three;
+}
+
+.card#four{
+    grid-area: four;
+    flex-direction: column;
+}
+
+.card#four img{
+    height: 70%;
+}
+
+.card#five{
+    grid-area: five;
+}
+
+.card#six{
+    grid-area: six;
+}
+
+.card#seven{
+    grid-area: seven;
+}
+
+.card#eight{
+    grid-area: eight;
+}

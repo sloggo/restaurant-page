@@ -1,16 +1,28 @@
 import {createHeader, $contentDiv} from './header.js';
 import {createHome} from './home.js'
+import {createMenu} from './menu.js'
 
 console.log('start');
 
 createHeader()
 createHome()
 
-const $homeButton = document.querySelector('p#home')
+function homeButtonEvent(but) {
+    but.addEventListener('click', (e) => {
+        $contentDiv.innerHTML = '';
+    
+        createHeader()
+        createHome()
+    })
+}
 
-$homeButton.addEventListener('click', (e) => {
-    $contentDiv.innerHTML = '';
+function menuButtonEvent(but) {
+    but.addEventListener('click', (e) => {
+        $contentDiv.innerHTML = '';
+    
+        createHeader()
+        createMenu()
+    })
+}
 
-    createHeader()
-    createHome()
-})
+export{homeButtonEvent, menuButtonEvent}
